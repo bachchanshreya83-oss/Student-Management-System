@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <title>Student Managment System</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+     <body>
+        <div class="container">
+         <h1>Welcome Back Admin!!</h1>
+         <div class="form-box">
+            <input type="text" id="name" placeholder="Enter Student Name">
+            <input type="text" id="rollNo" placeholder="Roll Number">
+            <input type="email" id="email" placeholder="Enter Email">
+            <input type="text" id="course" placeholder="Enter Course">
+            <input type="tel" id="phone" placeholder="Phone Number">
+            <input type="text" id="address" placeholder="Enter Address">
+            <input type="number" id="marks" placeholder="Enter Marks">
+            <input type="number" id="attendance" placeholder="Enter Attendance %">
+            <button onclick="addStudent()">Add Student</button>
+            <button onclick="clearFields()">Clear</button>
+            <button onclick="printTable()">Print / Download</button>
+            <input type="text" id="search" placeholder="Search Students" onkeyup="searchStudent()">
+            </div>
+         <h2>Student List</h2>
+         <table border="4" width="100%" bgcolor="Pink" id="studentTable">
+            <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th>Marks/Grades</th>
+                <th>Attendance</th>
+                <th>Result</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>1.</td>
+                <td>Tanishka</td>
+                <td>101</td>
+                <td>tansihka92@gmail.com</td>
+                <td>BBA</td>
+                <td>8236470291</td>
+                <td>Prayagraj</td>
+                <td>85</td>
+                <td>92%</td>
+                <td>Pass</td>
+                <td>
+                    <button onclick="editStudent(this)">Edit</button>
+                    <button onclick="deleteStudent(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>Ruchi</td>
+                <td>102</td>
+                <td>ruchi90@gmail.com</td>
+                <td>B.TECH</td>
+                <td>7849302312</td>
+                <td>Noida</td>
+                <td>78</td>
+                <td>88%</td>
+                <td>Pass</td>
+                <td>
+                    <button onclick="editStudent(this)">Edit</button>
+                    <button onclick="deleteStudent(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Prachi</td>
+                <td>103</td>
+                <td>prachi85@gmail.com</td>
+                <td>M.TECH</td>
+                <td>9453627190</td>
+                <td>Kanpur</td>
+                <td>25</td>
+                <td>65%</td>
+                <td>Fail</td>
+                <td>
+                    <button onclick="editStudent(this)">Edit</button>
+                    <button onclick="deleteStudent(this)">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>Neha</td>
+                <td>104</td>
+                <td>neha76@gmail.com</td>
+                <td>M.PHARMA</td>
+                <td>9464862172</td>
+                <td>Mirzapur</td>
+                <td>91</td>
+                <td>95%</td>
+                <td>Pass</td>
+                <td>
+                    <button onclick="editStudent(this)">Edit</button>
+                    <button onclick="deleteStudent(this)">Delete</button>
+                </td>
+            </tr>
+         </table>
+         <h3 id="studentCount">Total Students: 4</h3>
+         </div>
+         <script src="script.js"></script>
+     </body>    
+</html>
