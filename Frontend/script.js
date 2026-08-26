@@ -2,34 +2,42 @@ const API = "http://localhost:5000/api/records";
 
 window.onload = async function()
 {
-    let response = await fetch(API);
-    let records = await response.json();
-
-    let table = document.getElementById("studentTable");
-
-    while(table.rows.length > 1)
-        table.deleteRow(1);
-
-    records.forEach((student, index) =>
+    try
     {
-        let row = table.insertRow(-1);
-        row.setAttribute("data-id", student._id);
-        row.insertCell(0).innerHTML = index + 1;
-        row.insertCell(1).innerHTML = student.name;
-        row.insertCell(2).innerHTML = student.rollNo;
-        row.insertCell(3).innerHTML = student.email;
-        row.insertCell(4).innerHTML = student.course;
-        row.insertCell(5).innerHTML = student.phone;
-        row.insertCell(6).innerHTML = student.address;
-        row.insertCell(7).innerHTML = student.marks;
-        row.insertCell(8).innerHTML = student.attendance;
-        row.insertCell(9).innerHTML = student.result;
-        row.insertCell(10).innerHTML =
-            '<button onclick="editStudent(this)">Edit</button> ' +
-            '<button onclick="deleteStudent(this)">Delete</button>';
-    });
+        let response = await fetch(API);
+        let records = await response.json();
 
-    updateStudentCount();
+        let table = document.getElementById("studentTable");
+
+        while(table.rows.length > 1)
+            table.deleteRow(1);
+
+        records.forEach((student, index) =>
+        {
+            let row = table.insertRow(-1);
+            row.setAttribute("data-id", student._id);
+            row.insertCell(0).innerHTML = index + 1;
+            row.insertCell(1).innerHTML = student.name;
+            row.insertCell(2).innerHTML = student.rollNo;
+            row.insertCell(3).innerHTML = student.email;
+            row.insertCell(4).innerHTML = student.course;
+            row.insertCell(5).innerHTML = student.phone;
+            row.insertCell(6).innerHTML = student.address;
+            row.insertCell(7).innerHTML = student.marks;
+            row.insertCell(8).innerHTML = student.attendance;
+            row.insertCell(9).innerHTML = student.result;
+            row.insertCell(10).innerHTML =
+                '<button onclick="editStudent(this)">Edit</button> ' +
+                '<button onclick="deleteStudent(this)">Delete</button>';
+        });
+
+        updateStudentCount();
+    }
+    catch(error)
+    {
+        alert("Could not load students. Is the backend server running on " + API + " ?");
+        console.error("Error in window.onload:", error);
+    }
 }
 
 async function addStudent()
@@ -53,17 +61,33 @@ async function addStudent()
 
     let data = {name, rollNo, email, course, phone, address, marks, attendance, result};
 
-    let response = await fetch(API, {
-        method: "POST",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(data)
-    });
+    try
+    {
+        let response = await fetch(API, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(data)
+        });
 
-    let msg = await response.text();
-    alert(msg);
+        if(!response.ok)
+        {
+            let errText = await response.text();
+            alert("Server error: " + errText);
+            console.error("Add student failed:", response.status, errText);
+            return;
+        }
 
-    clearFields();
-    window.onload();
+        let msg = await response.text();
+        alert(msg);
+
+        clearFields();
+        window.onload();
+    }
+    catch(error)
+    {
+        alert("Could not reach server. Is the backend running on " + API + " ?");
+        console.error("Network/fetch error in addStudent:", error);
+    }
 }
 
 async function deleteStudent(button)
@@ -75,14 +99,22 @@ async function deleteStudent(button)
         let row = button.parentElement.parentElement;
         let id = row.getAttribute("data-id");
 
-        let response = await fetch(API + "/" + id, {
-            method: "DELETE"
-        });
+        try
+        {
+            let response = await fetch(API + "/" + id, {
+                method: "DELETE"
+            });
 
-        let msg = await response.text();
-        alert(msg);
+            let msg = await response.text();
+            alert(msg);
 
-        window.onload();
+            window.onload();
+        }
+        catch(error)
+        {
+            alert("Could not reach server. Is the backend running on " + API + " ?");
+            console.error("Network/fetch error in deleteStudent:", error);
+        }
     }
 }
 
@@ -98,7 +130,7 @@ async function editStudent(button)
     document.getElementById("phone").value = row.cells[5].innerText;
     document.getElementById("address").value = row.cells[6].innerText;
     document.getElementById("marks").value = row.cells[7].innerText;
-    document.getElementById("attendance").value = row.cells[8].innerText;
+    document.getElementById("attendance").value = row.cells[8].innerText.replace("%", "").trim();
 
     let addBtn = document.querySelector('button[onclick="addStudent()"]');
     addBtn.innerText = "Update Student";
@@ -122,21 +154,29 @@ async function updateStudent(id)
         result: result
     };
 
-    let response = await fetch(API + "/" + id, {
-        method: "PUT",
-        headers: {"Content-Type": "application/json"},
-        body: JSON.stringify(data)
-    });
+    try
+    {
+        let response = await fetch(API + "/" + id, {
+            method: "PUT",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(data)
+        });
 
-    let msg = await response.text();
-    alert(msg);
+        let msg = await response.text();
+        alert(msg);
 
-    let addBtn = document.querySelector('button[onclick^="updateStudent"]');
-    addBtn.innerText = "Add Student";
-    addBtn.setAttribute("onclick", "addStudent()");
+        let addBtn = document.querySelector('button[onclick^="updateStudent"]');
+        addBtn.innerText = "Add Student";
+        addBtn.setAttribute("onclick", "addStudent()");
 
-    clearFields();
-    window.onload();
+        clearFields();
+        window.onload();
+    }
+    catch(error)
+    {
+        alert("Could not reach server. Is the backend running on " + API + " ?");
+        console.error("Network/fetch error in updateStudent:", error);
+    }
 }
 
 function clearFields()
