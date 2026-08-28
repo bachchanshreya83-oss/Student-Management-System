@@ -100,11 +100,11 @@ Create – Add new student records
 Read – View student information
 Update – Edit existing student information
 Delete – Remove student records
-🎯 Purpose
 
+##🎯 Purpose
 The main purpose of this project is to provide a simple and efficient platform for managing student information while gaining practical experience in full-stack web development.
 
-🔮 Future Improvements
+## Future Improvements
 📈 Advanced analytics and reports
 📧 Email notifications
 👤 Role-based access control
