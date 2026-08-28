@@ -1,7 +1,7 @@
 # Student Management System
 
 A full-stack web application for managing student records efficiently. 
-The system allows users to add, view, search, edit, and delete student information through a simple and user-friendly dashboard.
+The system allows users to add, view, search, edit, and delete student(CRUD Operation) information through a simple and user-friendly dashboard.
 
 ## 🚀 Features
 
@@ -12,8 +12,8 @@ The system allows users to add, view, search, edit, and delete student informati
 - ✏️ Edit student information
 - 🗑️ Delete student records
 - 📊 Student dashboard
-- 🌙 Dark / Light mode
-- 📱 Responsive user interface
+- 📱 Attendance and Marks 
+  
 
 ## 🛠️ Tech Stack
 
@@ -21,7 +21,6 @@ The system allows users to add, view, search, edit, and delete student informati
 - HTML
 - CSS
 - JavaScript
-- EJS
 
 ### Backend
 - Node.js
