@@ -37,19 +37,30 @@ The system allows users to add, view, search, edit, and delete student(CRUD Oper
 ## 📂 Project Structure
 
 ```text
-Student-Management-System/
+Student Management System
 │
-├── public/
-│   ├── css/
-│   ├── js/
-│   └── images/
+├── Backend
+│   ├── node_modules
+│   ├── dbconnect.js
+│   ├── index.js
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server.js
 │
-├── views/
-│   ├── login.ejs
-│   ├── dashboard.ejs
-│   └── ...
+├── Frontend
+│   ├── dashboard.css
+│   ├── dashboard.html
+│   ├── dashboard.js
+│   ├── index.html
+│   ├── invalid.css
+│   ├── invalid.html
+│   ├── login.css
+│   ├── login.html
+│   ├── login.js
+│   ├── script.js
+│   ├── student.css
+│   ├── student.html
+│   ├── student.js
+│   └── style.css
 │
-├── dbconnect.js
-├── server.js
-├── package.json
-└── README.md
+└── .env
