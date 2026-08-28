@@ -1,18 +1,14 @@
-# Student Management System
+## Student Management System
+A full-stack web app to manage student records with role-based login (Admin / Student), a dashboard, and complete CRUD functionality — add, edit, delete, search, and print/download student data.
 
-A full-stack web application for managing student records efficiently. 
-The system allows users to add, view, search, edit, and delete student(CRUD Operation) information through a simple and user-friendly dashboard.
-
-## 🚀 Features
-
-- 🔐 Admin / Student Login
-- ➕ Add new students
-- 👀 View student records
-- 🔍 Search students
-- ✏️ Edit student information
-- 🗑️ Delete student records
-- 📊 Student dashboard
-- 📱 Attendance and Marks 
+## Features
+-Role-based login (Admin / Student) with an invalid-login page
+-Admin dashboard
+-Add, edit, and delete student records
+-Auto-calculated Result (Pass/Fail) based on marks (≥ 33 = Pass)
+-Live search by student name or roll number
+-Print / download the student list
+-Student count summary
   
 
 ## 🛠️ Tech Stack
@@ -75,38 +71,3 @@ Student Management System
 │
 └── .env
 
-
-⚙️ Installation & Setup
-1. Clone the repository
-git clone <your-github-repository-link>
-2. Navigate to the project folder
-cd Student-Management-System
-3. Install dependencies
-npm install
-4. Start MongoDB
-
-Make sure MongoDB is installed and running on your system.
-
-5. Start the application
-node server.js
-
-The application will run on the local server.
-
-🔄 CRUD Operations
-
-The system supports the following student record operations:
-
-Create – Add new student records
-Read – View student information
-Update – Edit existing student information
-Delete – Remove student records
-
-##🎯 Purpose
-The main purpose of this project is to provide a simple and efficient platform for managing student information while gaining practical experience in full-stack web development.
-
-## Future Improvements
-📈 Advanced analytics and reports
-📧 Email notifications
-👤 Role-based access control
-📱 Fully responsive mobile interface
-☁️ Cloud database integration
