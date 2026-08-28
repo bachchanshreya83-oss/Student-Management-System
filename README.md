@@ -2,13 +2,13 @@
 A full-stack web app to manage student records with role-based login (Admin / Student), a dashboard, and complete CRUD functionality — add, edit, delete, search, and print/download student data.
 
 ## Features
--Role-based login (Admin / Student) with an invalid-login page
--Admin dashboard
--Add, edit, and delete student records
--Auto-calculated Result (Pass/Fail) based on marks (≥ 33 = Pass)
--Live search by student name or roll number
--Print / download the student list
--Student count summary
+* Role-based login (Admin / Student) with an invalid-login page
+* Admin dashboard 
+* Add, edit, and delete student records
+* Auto-calculated Result (Pass/Fail) based on marks (≥ 33 = Pass)
+* Live search by student name or roll number
+* Print / download the student list
+* Student count summary
   
 
 ## 🛠️ Tech Stack
