@@ -2,7 +2,7 @@
 A full-stack web app to manage student records with role-based login (Admin / Student), a dashboard, and complete CRUD functionality — add, edit, delete, search, and print/download student data.
 
 ## Features
-* Role-based login (Admin / Student) with an invalid-login page
+* Role-based login (Admin / Student) 
 * Admin dashboard
 * Student dashboard 
 * Add, edit,delete,update student records(CRUD Operation)
@@ -10,6 +10,7 @@ A full-stack web app to manage student records with role-based login (Admin / St
 * Live search by student name or roll number
 * Print or download the student list
 * Student count summary(total students)
+* If wrong login then an invalid-login page will appear
   
 
 ## 🛠️ Tech Stack
