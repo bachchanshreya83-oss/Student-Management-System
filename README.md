@@ -8,7 +8,7 @@ A full-stack web app to manage student records with role-based login (Admin / St
 * Add, edit,delete,update student records
 * Auto-calculated Result (Pass/Fail) based on marks (≥ 33 = Pass)
 * Live search by student name or roll number
-* Print / download the student list
+* Print or download the student list
 * Student count summary(total students)
   
 
