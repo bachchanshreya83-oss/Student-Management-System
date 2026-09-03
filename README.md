@@ -73,3 +73,67 @@ Student Management System
 │
 └── .env
 
+
+## How to Run Locally
+
+### 1. Clone the Repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+### 2. Navigate to the Project Folder
+
+```bash
+cd Student-Management-System
+```
+
+### 3. Install Dependencies
+
+```bash
+npm install
+```
+
+### 4. Start MongoDB
+
+Make sure MongoDB is installed and running on your system.
+
+The project uses MongoDB locally:
+
+```text
+mongodb://localhost:27017
+```
+
+### 5. Configure Database
+
+Make sure the database and collection names match the configuration in the project.
+
+Example:
+
+```text
+Database: smsdb
+Collection: students
+```
+
+### 6. Start the Server
+
+```bash
+node server.js
+```
+
+If you are using nodemon:
+
+```bash
+npm run dev
+```
+
+### 7. Open the Application
+
+Open your browser and visit:
+
+```text
+http://localhost:3000
+```
+
+The Student Management System should now be running locally.
+
