@@ -72,7 +72,7 @@ Student Management System
 │   └── style.css
 │
 └── .env
-
+```
 
 ## How to Run Locally
 
