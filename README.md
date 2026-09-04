@@ -118,7 +118,7 @@ Collection: students
 ### 6. Start the Server
 
 ```bash
-node server.js
+server.js(it will show server connected)
 ```
 
 If you are using nodemon:
