@@ -102,7 +102,7 @@ Make sure MongoDB is installed and running on your system.
 The project uses MongoDB locally:
 
 ```text
-mongodb://localhost:3000
+mongodb://localhost:5000
 ```
 
 ### 5. Configure Database
@@ -119,7 +119,7 @@ Collection: students
 ### 6. Start the Server
 
 ```bash
-server.js(it will show server connected)
+server.js(Server Running)
 ```
 
 If you are using nodemon:
