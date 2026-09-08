@@ -102,7 +102,7 @@ Make sure MongoDB is installed and running on your system.
 The project uses MongoDB locally:
 
 ```text
-mongodb://localhost:27017
+mongodb://localhost:3000
 ```
 
 ### 5. Configure Database
