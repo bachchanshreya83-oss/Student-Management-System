@@ -11,7 +11,7 @@ A full-stack web app to manage student records with role-based login (Admin / St
 * Print or download the student list
 * Student count summary(total students)
 * Attendance Calculation(Out of 100)
-* If wrong login then an invalid-login page will appear(with a teasing face)
+* If wrong login then an invalid-login page will appear.
   
 
 ## 🛠️ Tech Stack
