@@ -1,10 +1,10 @@
 ## Student Management System
-A full-stack web app to manage student records with role-based login (Admin / Student), a dashboard, and complete CRUD functionality — add, edit, delete, search, and print/download student data.
+A full-stack web app to manage student records with role-based login (Admin / Student), a dashboard, and complete CRUD functionality — add, edit, delete, search, and print/download students data.
 
 ## Features
 * Role-based login (Admin / Student) 
 * Admin dashboard
-* Student dashboard 
+* Student dashboard(for per student) 
 * Add, edit,delete,update student records(CRUD Operation)
 * Auto-calculated Result (Pass/Fail) based on marks (≥ 33 = Pass)
 * Live search by student name or roll number
