@@ -134,7 +134,7 @@ npm run dev
 Open your browser and visit:
 
 ```text
-http://localhost:3000
+http://localhost:5000
 ```
 
 The Student Management System should now be running locally.
