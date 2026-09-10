@@ -4,7 +4,8 @@ A full-stack web app to manage student records with role-based login (Admin / St
 ## Features
 * Role-based login (Admin / Student) 
 * Admin dashboard
-* Student dashboard(for per student) 
+* Student dashboard(for per student)
+* Every Student has a login on basis of there roll number.
 * Add, edit,delete,update student records(CRUD Operation)
 * Auto-calculated Result (Pass/Fail) based on marks (≥ 33 = Pass)
 * Live search by student name or roll number
